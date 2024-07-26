@@ -1,14 +1,13 @@
     localStorage.setItem("searchResult", JSON.stringify({
         "schools for girls":"forgirls.html",
-        "schools for girls":"forboys.html",
+        "schools for boys":"forboys.html",
         "schools for the disabled":"fordisabled.html",
         "schools for deaf":"fordeaf.html"
     }));
     function search(){
         const userinput = document.getElementById("search-input").value.toLowerCase();
         const searchResult =JSON.parse(localStorage.getItem("searchResult"));
-
-        if(searchReasult[userinput]){        
+        if(searchResult[userinput]){        
             window.location.href= searchResult[userinput];
         } else {
             alert("not found");
