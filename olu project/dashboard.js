@@ -1,20 +1,15 @@
-function promptUser(){
-const childGender =prompt("is your child Male or Female?");
+function search(){
+const userinput=document.getElementById("search-input").ariaValueMax.toLowerCase();
 
-if(childGender.toLowerCase()==="Male"
-|| childGender.toLowerCase()==="Female")
-{
-    const childStatus=prompt("is your child Deaf or Disabled?");
-    if(childStatus.toLowerCase()==="Deaf")
-        {
-            window.location.href ="fordeaf.html";
-        } else if(childStatus.toLowerCase()=== "Disabled"){
-            window.location.href="fordisabled.html";
-        }else{
-            alert("Invalid input.please enter 'Deaf' or 'Disabled'.");
-        }
-    }else{
-        alert("Invalid input.please enter 'Male' or 'Feamale'.");
-    }
-        
+if(userinput === "schools for girls"){
+    window.location.href ="forgirls.html";
+}else if ( userinput === "Schools for boys"){
+    window.location.href="forboys.html";
+}else if (userinput=== "Schools for the disabled"){
+    window.location.href= "fordisabled.html";
+}else if (userinput=== "Schools for deaf"){
+    window.location.href= "fordeaf.html";
+}else{
+    alert("Not found");
+}
 }
